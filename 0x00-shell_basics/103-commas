@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -1AFp | awk '{gsub(/\n/,""); if ($0 == "./") print; else if ($0 == "../") print; else if (substr($0, length($0), 1) == "/") printf "%s, ", $0; else printf "%s, ", $0}' | LC_ALL=C sort -d -f -k1.1 | sed '$s/, $/\n/'
+ls -xamp
