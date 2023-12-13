@@ -1,2 +1,2 @@
 #!/bin/bash
-awk 'NR % 2 == 1' < 102-odd
+head -n $(($(wc -l < input_file) / 2 + $(wc -l < input_file) % 2)) input_file && tail -n +2 input_file | head -n $(($(wc -l < input_file) / 2))
